@@ -1,0 +1,20 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/navida/Desktop/Navid_Project/New folder (11)/spi_mosi1/SPI_MOSI_tb_isim_beh.exe" -prj "C:/Users/navida/Desktop/Navid_Project/New folder (11)/spi_mosi1/SPI_MOSI_tb_beh.prj" "work.SPI_MOSI_tb" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/navida/Desktop/Navid_Project/New folder (11)/spi_mosi1/spimosi1.vhd" into library work
+Parsing VHDL file "C:/Users/navida/Desktop/Navid_Project/New folder (11)/spi_mosi1/SPI_MOSI_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behavioral of entity spimosi1 [spimosi1_default]
+Compiling architecture behavior of entity spi_mosi_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable C:/Users/navida/Desktop/Navid_Project/New folder (11)/spi_mosi1/SPI_MOSI_tb_isim_beh.exe
+Fuse Memory Usage: 36676 KB
+Fuse CPU Usage: 1280 ms
