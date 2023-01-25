@@ -1,0 +1,28 @@
+Command line:
+   SPI_MOSI_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60573
+
+Wed Jan 25 00:19:49 2023
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 5154.46 Meg
+
+ Total Signals          : 19
+ Total Nets             : 63
+ Total Signal Drivers   : 13
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 8
+ Total Traceable Variables  : 15
+ Total Scalar Nets and Variables : 548
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 5154.46 Meg
+
+Wed Jan 25 00:19:57 2023
+

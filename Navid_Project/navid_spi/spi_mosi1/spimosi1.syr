@@ -1,0 +1,417 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Reading design: spimosi1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "spimosi1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "spimosi1"
+Output Format                      : NGC
+Target Device                      : xa7a100t-2I-csg324
+
+---- Source Options
+Top Module Name                    : spimosi1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\navida\Desktop\New folder (11)\spi_mosi1\spimosi1.vhd" into library work
+Parsing entity <spimosi1>.
+Parsing architecture <Behavioral> of entity <spimosi1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <spimosi1> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <spimosi1>.
+    Related source file is "C:\Users\navida\Desktop\New folder (11)\spi_mosi1\spimosi1.vhd".
+WARNING:Xst:647 - Input <SCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <Data_In_INT_dummy_dummy> equivalent to <Data_In_INT> has been removed
+    Register <Data_In_INT_dummy> equivalent to <Data_In_INT> has been removed
+    Found 1-bit register for signal <start_INT>.
+    Found 1-bit register for signal <MOSI_INT>.
+    Found 5-bit register for signal <Bit_CNT>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <CS_n_INT>.
+    Found 1-bit register for signal <Data_In_INT<21>>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | CLK_SYS (rising_edge)                          |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit subtractor for signal <GND_4_o_GND_4_o_sub_3_OUT<4:0>> created at line 1308.
+    WARNING:Xst:2404 -  FFs/Latches <Data_In_INT<1:2>> (without init value) have a constant value of 0 in block <spimosi1>.
+    WARNING:Xst:2404 -  FFs/Latches <Data_In_INT<3:6>> (without init value) have a constant value of 0 in block <spimosi1>.
+    WARNING:Xst:2404 -  FFs/Latches <Data_In_INT<7:21>> (without init value) have a constant value of 0 in block <spimosi1>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <spimosi1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 5
+ 1-bit register                                        : 4
+ 5-bit register                                        : 1
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst - The specified part-type was not generated at build time. XST is loading the full part-type and will therefore consume more CPU and memory.
+Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+WARNING:Xst:1426 - The value init of the FF/Latch Data_In_INT hinder the constant cleaning in the block spimosi1.
+   You should achieve better results by setting this init to 1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Multiplexers                                         : 8
+ 1-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 6
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch Data_In_INT hinder the constant cleaning in the block spimosi1.
+   You should achieve better results by setting this init to 1.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with sequential encoding.
+-------------------------------
+ State             | Encoding
+-------------------------------
+ idle              | 000
+ instruction       | 011
+ write_st          | 010
+ delay_instruction | 001
+ delay_cs          | 100
+-------------------------------
+
+Optimizing unit <spimosi1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block spimosi1, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 12
+ Flip-Flops                                            : 12
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : spimosi1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 14
+#      LUT2                        : 1
+#      LUT3                        : 2
+#      LUT4                        : 2
+#      LUT5                        : 3
+#      LUT6                        : 5
+#      VCC                         : 1
+# FlipFlops/Latches                : 12
+#      FD                          : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 1
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa7a100tcsg324-2i 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              12  out of  126800     0%  
+ Number of Slice LUTs:                   13  out of  63400     0%  
+    Number used as Logic:                13  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     15
+   Number with an unused Flip Flop:       3  out of     15    20%  
+   Number with an unused LUT:             2  out of     15    13%  
+   Number of fully used LUT-FF pairs:    10  out of     15    66%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   4  out of    210     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_SYS                            | BUFGP                  | 12    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 1.688ns (Maximum Frequency: 592.312MHz)
+   Minimum input arrival time before clock: 0.348ns
+   Maximum output required time after clock: 0.700ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_SYS'
+  Clock period: 1.688ns (frequency: 592.312MHz)
+  Total number of paths / destination ports: 66 / 10
+-------------------------------------------------------------------------
+Delay:               1.688ns (Levels of Logic = 2)
+  Source:            Bit_CNT_1 (FF)
+  Destination:       MOSI_INT (FF)
+  Source Clock:      CLK_SYS rising
+  Destination Clock: CLK_SYS rising
+
+  Data Path: Bit_CNT_1 to MOSI_INT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.361   0.770  Bit_CNT_1 (Bit_CNT_1)
+     LUT6:I0->O            1   0.097   0.355  Mmux_Bit_CNT[4]_X_4_o_Mux_1_o11 (Bit_CNT[4]_X_4_o_Mux_1_o)
+     LUT3:I2->O            1   0.097   0.000  MOSI_INT_rstpot (MOSI_INT_rstpot)
+     FD:D                      0.008          MOSI_INT
+    ----------------------------------------
+    Total                      1.688ns (0.563ns logic, 1.125ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_SYS'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.348ns (Levels of Logic = 1)
+  Source:            start (PAD)
+  Destination:       start_INT (FF)
+  Destination Clock: CLK_SYS rising
+
+  Data Path: start to start_INT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.339  start_IBUF (start_IBUF)
+     FD:D                      0.008          start_INT
+    ----------------------------------------
+    Total                      0.348ns (0.009ns logic, 0.339ns route)
+                                       (2.6% logic, 97.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_SYS'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.700ns (Levels of Logic = 1)
+  Source:            CS_n_INT (FF)
+  Destination:       CS_n (PAD)
+  Source Clock:      CLK_SYS rising
+
+  Data Path: CS_n_INT to CS_n
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.361   0.339  CS_n_INT (CS_n_INT)
+     OBUF:I->O                 0.000          CS_n_OBUF (CS_n)
+    ----------------------------------------
+    Total                      0.700ns (0.361ns logic, 0.339ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_SYS
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_SYS        |    1.688|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 59.00 secs
+Total CPU time to Xst completion: 59.13 secs
+ 
+--> 
+
+Total memory usage is 4995932 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
